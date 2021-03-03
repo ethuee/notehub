@@ -72,7 +72,7 @@ def showTips():
         print('-------->> 如需使用其他端口，请执行: ')
         print('-------->> python HTTPServerWithUpload.py port ')
         print("-------->> port是一个整数，它的范围是: 1024 < port < 65535 ")
-        port = 80
+        port = 8080
 
     if not 1024 < port < 65535:
         port = 80
@@ -268,7 +268,7 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
         f.write("<input type=\"button\" value=\"主目录\" onClick=\"location='/'\">")
         f.write("</form>\n")
         f.write(
-            '<h2 style="color:#FF0000">请先选择完文件再点上传，不这样做的话可能会出现奇怪的情况</h2><hr>\n<ul>\n')
+                '<h2 style="color:#000000">请先选择完文件再点上传，不这样做的话可能会出现奇怪的情况</h2><hr>\n<ul>\n')
         for name in list:
             fullname = os.path.join(path, name)
             colorName = displayname = linkname = name
